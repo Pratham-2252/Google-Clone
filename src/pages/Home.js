@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import { Avatar } from "@mui/material";
 import Search from "./Search";
-function Home() {
+
+const Home = () => {
   return (
     <div className="home">
       <div className="home__header">
@@ -30,6 +31,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

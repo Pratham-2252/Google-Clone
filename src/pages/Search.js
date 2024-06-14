@@ -6,14 +6,15 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
-function Search({ hideButtons = false }) {
+
+const Search = ({ hideButtons = false }) => {
   const [{}, dispatch] = useStateValue();
 
   const [input, setInput] = useState("");
   const history = useNavigate();
+
   const search = (e) => {
     e.preventDefault();
-    console.log("You Hit >>", input);
 
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
@@ -52,6 +53,6 @@ function Search({ hideButtons = false }) {
       )}
     </form>
   );
-}
+};
 
 export default Search;
